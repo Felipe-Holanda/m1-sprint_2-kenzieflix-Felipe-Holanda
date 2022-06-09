@@ -1,6 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=Montserrat:wght@300&family=Open+Sans&display=swap');
+
 body{
     margin: 0;
     padding: 0;
-    background: black;
-    font-family: 'Roboto', sans-serif;
+    background-color: black;
+    color: white;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+center img{
+    width: 44%;
+    height: 44%;
+}
+
+
+center h2{
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+main img{
+    width: 192px;
+    height: 192px;
+    border-radius: 15px;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.profilepic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px
+}
+
+.createprofile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px
+}
+
+.div-vector{
+    background-color: #1E1E20;
+    color: white;
+    border-radius: 15px;
+    width: 192px;
+    height: 192px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.vector{
+    width: 40%;
+    height: 40%;
+    outline: 5px solid #6F6F70;
+    border-radius: 100%;
+}
+
+.vector:before{
+    content: '';
+    outline: 3px solid #6F6F70;
+    border-radius: 50px;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translate(20px, 40px);
+}
+.vector:after{
+    content: ' ';
+    outline: 3px solid #6F6F70;
+    border-radius: 1000%;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(90deg) translate(40px, -20px);
+}
+
+aside{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+aside button{
+    background-color: black;
+    color: white;
+    border: none;
+    outline: 3px solid white;
+    border-radius: 30px;
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+}
+
+@keyframes colorChange{
+    0%{
+        background-color: black;
+        color: white;
+    }
+    100%{
+        background-color: white;
+        color: black;
+        font-weight: bold;
+    }
+}
+
+aside button:hover{
+    animation: colorChange .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes colorReturn{
+    0%{
+        background-color: white;
+        color: black;
+        font-weight: bold;
+    }
+    100%{
+        background-color: black;
+        color: white;
+    }
+}
+
+aside button:not(:hover){
+    animation: colorReturn .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes scaleUp{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.05);
+    }
+}
+
+center img:hover{
+    animation: scaleUp 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes scaleDown{
+    0%{
+        transform: scale(1.05);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+center img:not(:hover){
+    animation: scaleDown 1s;
+    animation-fill-mode: forwards;
 }
