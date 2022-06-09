@@ -188,8 +188,17 @@ center img:not(:hover){
     0%{
         outline: none;
     }
+    25%{
+        outline: .75px solid white;
+    }
+    50%{
+        outline: 1.5px solid white;
+    }
+    75%{
+        outline: 2.25px solid white;
+    }
     100%{
-        outline: 2px solid white;
+        outline: 3px solid white;
     }
 }
 
@@ -220,7 +229,10 @@ center img:not(:hover){
 /*  Animação no SPAN  */
 @keyframes crossFadeIn{
     0%{
-        outline: 5px solid #6F6F70;
+        outline: 3px solid #6F6F70;
+    }
+    50%{
+        outline: 3px solid #b8b8b8;
     }
     100%{
         outline: 3px solid white;
@@ -231,6 +243,9 @@ center img:not(:hover){
 @keyframes crossFadeOut{
     0%{
         outline: 3px solid white;
+    }
+    50%{
+        outline: 3px solid #b8b8b8;
     }
     100%{
         outline: 3px solid #6F6F70;
