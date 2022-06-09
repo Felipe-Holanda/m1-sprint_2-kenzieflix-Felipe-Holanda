@@ -258,19 +258,19 @@ main img:not(:hover){
 
 @keyframe turnWhite{
     0%{
-        background-color: #6F6F70;
+        outline: 5px solid #6F6F70;
     }
     100%{
-        background-color: white;
+        outline: 5px solid white;
     }
 }
 
 @keyframe turnGray{
     0%{
-        background-color: white;
+        outline: 5px solid white;
     }
     100%{
-        background-color: #6F6F70;
+        outline: 5px solid #6F6F70;
     }
 }
 
