@@ -51,6 +51,7 @@ main{
     margin: 10px
 }
 
+
 .createprofile{
     display: flex;
     justify-content: center;
@@ -179,5 +180,106 @@ center img:hover{
 
 center img:not(:hover){
     animation: scaleDown 1s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes toBold{
+    0%{
+        font-weight: normal;
+    }
+    100%{
+        font-weight: bold;
+    }
+}
+
+@keyframes toNormal{
+    0%{
+        font-weight: bold;
+    }
+    100%{
+        font-weight: normal;
+    }
+}
+    
+.createprofile:hover{
+    animation: toBold .3s;
+    animation-fill-mode: forwards;
+}
+
+.createprofile:not(:hover){
+    animation: toNormal .3s;
+    animation-fill-mode: forwards;
+}
+
+.profilepic:hover{
+    animation: toBold .3s;
+    animation-fill-mode: forwards;
+}
+
+.profilepic:not(:hover){
+    animation: toNormal .3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes createOutline{
+    0%{
+        outline: none;
+    }
+    100%{
+        outline: 3px solid white;
+    }
+}
+
+@keyframes removeOutline{
+    0%{
+        outline: 3px solid white;
+    }
+    100%{
+        outline: none;
+    }
+}
+
+main img:hover{
+    animation: createOutline .2s;
+    animation-fill-mode: forwards;
+}
+
+main img:not(:hover){
+    animation: removeOutline .2s;
+    animation-fill-mode: forwards;
+}
+
+.div-vector:hover{
+    animation: createOutline .2s;
+    animation-fill-mode: forwards;
+    color:white;
+}
+
+@keyframe turnWhite{
+    0%{
+        background-color: #6F6F70;
+    }
+    100%{
+        background-color: white;
+    }
+}
+
+@keyframe turnGray{
+    0%{
+        background-color: white;
+    }
+    100%{
+        background-color: #6F6F70;
+    }
+}
+
+.vector:hover{
+    animation: turnWhite .2s;
+    animation-fill-mode: forwards;
+}
+
+.vector:not(:hover){
+    animation: turnGray .2s;
     animation-fill-mode: forwards;
 }
