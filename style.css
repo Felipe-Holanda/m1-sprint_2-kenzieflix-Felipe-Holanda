@@ -184,102 +184,82 @@ center img:not(:hover){
 }
 
 
-@keyframes toBold{
-    0%{
-        font-weight: normal;
-    }
-    100%{
-        font-weight: bold;
-    }
-}
-
-@keyframes toNormal{
-    0%{
-        font-weight: bold;
-    }
-    100%{
-        font-weight: normal;
-    }
-}
-    
-.createprofile:hover{
-    animation: toBold .3s;
-    animation-fill-mode: forwards;
-}
-
-.createprofile:not(:hover){
-    animation: toNormal .3s;
-    animation-fill-mode: forwards;
-}
-
-.profilepic:hover{
-    animation: toBold .3s;
-    animation-fill-mode: forwards;
-}
-
-.profilepic:not(:hover){
-    animation: toNormal .3s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes createOutline{
+@keyframes outlineIn{
     0%{
         outline: none;
     }
     100%{
-        outline: 3px solid white;
+        outline: 2px solid white;
     }
 }
 
-@keyframes removeOutline{
-    0%{
-        outline: 3px solid white;
-    }
-    100%{
-        outline: none;
-    }
-}
 
-main img:hover{
-    animation: createOutline .2s;
+.profilepic:hover img{
+    animation: outlineIn .2s;
     animation-fill-mode: forwards;
 }
 
-main img:not(:hover){
-    animation: removeOutline .2s;
-    animation-fill-mode: forwards;
+.profilepic:hover p{
+    font-weight: bold;
 }
 
-.div-vector:hover{
-    animation: createOutline .2s;
+
+/* Animação no Card Vazio */
+
+
+
+.createprofile:hover div{
+    animation: outlineIn .2s;
     animation-fill-mode: forwards;
-    color:white;
+}
+.createprofile:hover p{
+    font-weight: bold;
 }
 
-@keyframe turnWhite{
+
+/*  Animação no SPAN  */
+@keyframes crossFadeIn{
     0%{
         outline: 5px solid #6F6F70;
     }
     100%{
-        outline: 5px solid white;
+        outline: 3px solid white;
     }
+
 }
 
-@keyframe turnGray{
+@keyframes crossFadeOut{
     0%{
-        outline: 5px solid white;
+        outline: 3px solid white;
     }
     100%{
-        outline: 5px solid #6F6F70;
+        outline: 3px solid #6F6F70;
     }
 }
 
-.vector:hover{
-    animation: turnWhite .2s;
+.createprofile:hover span{
+    animation: crossFadeIn .3s;
+    animation-fill-mode: forwards;
+}
+.createprofile:hover span::before{
+    animation: crossFadeIn .3s;
+    animation-fill-mode: forwards;
+}
+.createprofile:hover span::after{
+    animation: crossFadeIn .3s;
     animation-fill-mode: forwards;
 }
 
-.vector:not(:hover){
-    animation: turnGray .2s;
+.createprofile:not(:hover) span{
+    animation: crossFadeOut .3s;
     animation-fill-mode: forwards;
 }
+.createprofile:not(:hover) span::before{
+    animation: crossFadeOut .3s;
+    animation-fill-mode: forwards;
+}
+.createprofile:not(:hover) span::after{
+    animation: crossFadeOut .3s;
+    animation-fill-mode: forwards;
+}
+
